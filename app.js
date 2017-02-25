@@ -9,6 +9,7 @@ var express      = require('express');
 var app          = express();
 var mongoose     = require('mongoose');
 var configDB     = require('./config/database');
+var seed         = require('./seed');
 var port         = process.env.PORT || 1337;
 
 // Allow Express to serve static files in "public" directory
@@ -22,6 +23,7 @@ app.set('view engine', 'pug');
 // Database configurations
 // ---------------------------------------------------------
 mongoose.connect(configDB.url);
+seed.seedDB();
 
 // ---------------------------------------------------------
 // API Endpoints
