@@ -1,0 +1,19 @@
+{
+  "name": "mastery",
+  "version": "0.1.0",
+  "description": "An app to compare your development of skills with other users",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gioperalto/mastery.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gioperalto/mastery/issues"
+  },
+  "homepage": "https://github.com/gioperalto/mastery#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
