@@ -1,14 +1,14 @@
-nav.black
+nav.white
   div.nav-wrapper
     a.brand-logo.center(href='/')
       img(src='/assets/images/logos/logo.png' height='64px')
     ul#nav-mobile.right.hide-hide-on-med-and-down.valign-wrapper
       if login
         li
-          a(href='/profile') Profile
+          a(href='/profile').black-text Profile
         li
-          a(href='/logout') Logout
+          a(href='/logout').black-text Logout
       else
         li
-          a(href='/login') Login
+          a(href='/login').black-text Login
 include ../partials/flash.pug
