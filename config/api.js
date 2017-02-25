@@ -1,5 +1,5 @@
 // config/api.js
 
-module.exports = {
+module.exports = function(app) {
 
 };
