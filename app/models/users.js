@@ -18,7 +18,9 @@ var userSchema = new Schema({
     hours: {
       type: Number,
       default: 0
-    }
+    },
+    start: Date,
+    end: Date
   }],
   accomplishments: [{
     type: Schema.Types.ObjectId,
