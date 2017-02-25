@@ -1,26 +1,21 @@
-// app/models/activitys.js
+// app/models/accomplishments.js
 
 // grab the things we need
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // create a schema
-var activitySchema = new Schema({
+var accomplishmentSchema = new Schema({
   name: {
     type: String,
     required: true
   },
-  skill: {
-    type: Schema.Types.ObjectId,
-    ref: 'Skill'
-  },
-  description: String,
   created_at: Date,
   modified_at: Date
 });
 
 // on every save, add the date
-userSchema.pre('save', function(next) {
+accomplishmentSchema.pre('save', function(next) {
   // get the current date
   var currentDate = new Date();
   
@@ -34,7 +29,7 @@ userSchema.pre('save', function(next) {
   next();
 });
 
-var activity = mongoose.model('Activity', activitySchema);
+var accomplishment = mongoose.model('Accomplishment', accomplishmentSchema);
 
-// make this available to our activity in our Node applications
-module.exports = activity;
+// make this available to our accomplishment in our Node applications
+module.exports = accomplishment;

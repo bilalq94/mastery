@@ -1,21 +1,25 @@
-// app/models/accomplishments.js
+// app/models/milestones.js
 
 // grab the things we need
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // create a schema
-var accomplishmentSchema = new Schema({
+var milestoneSchema = new Schema({
   name: {
     type: String,
     required: true
+  },
+  hours: {
+    type: Number,
+    default: 0
   },
   created_at: Date,
   modified_at: Date
 });
 
 // on every save, add the date
-userSchema.pre('save', function(next) {
+milestoneSchema.pre('save', function(next) {
   // get the current date
   var currentDate = new Date();
   
@@ -29,7 +33,7 @@ userSchema.pre('save', function(next) {
   next();
 });
 
-var accomplishment = mongoose.model('Accomplishment', accomplishmentSchema);
+var milestone = mongoose.model('Milestone', milestoneSchema);
 
-// make this available to our accomplishment in our Node applications
-module.exports = accomplishment;
+// make this available to our milestones in our Node applications
+module.exports = milestone;

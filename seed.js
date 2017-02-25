@@ -107,7 +107,7 @@ module.exports = {
           module.exports.seedMilestone,
           callback
         );
-      }
+      },
       function(callback) {
         module.exports.seedItems(
           seed.seedValues.activitys,

@@ -1,25 +1,21 @@
-// app/models/milestones.js
+// app/models/skills.js
 
 // grab the things we need
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // create a schema
-var milestoneSchema = new Schema({
+var skillSchema = new Schema({
   name: {
     type: String,
     required: true
   },
-  hours: {
-    type: Number,
-    default: 0
-  }
   created_at: Date,
   modified_at: Date
 });
 
 // on every save, add the date
-userSchema.pre('save', function(next) {
+skillSchema.pre('save', function(next) {
   // get the current date
   var currentDate = new Date();
   
@@ -33,7 +29,7 @@ userSchema.pre('save', function(next) {
   next();
 });
 
-var milestone = mongoose.model('Milestone', milestoneSchema);
+var skill = mongoose.model('Skill', skillSchema);
 
-// make this available to our milestones in our Node applications
-module.exports = milestone;
+// make this available to our skill in our Node applications
+module.exports = skill;

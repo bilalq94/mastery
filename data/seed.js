@@ -11,6 +11,9 @@ module.exports = {
         name: 'Made an app'
       },
       {
+        name: 'Been to a hackathon'
+      },
+      {
         name: 'Won a hackathon'
       }
     ],
